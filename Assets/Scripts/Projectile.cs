@@ -39,5 +39,11 @@ public class Projectile : MonoBehaviour {
                 if (transform.parent != null) Destroy(transform.parent.gameObject);
             }
         }
+        //当子弹撞到墙壁，销毁子弹。
+        //墙壁在TilemapVisualizer中定义
+        if (other.tag == "Wall") 
+        {
+            Destroy(gameObject);
+        }
     }
 }

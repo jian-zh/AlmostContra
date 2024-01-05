@@ -34,6 +34,7 @@ public class CameraController : MonoBehaviour {
             {
                 x = player.position.x;
             }
+           
         }
         var cameraHaflWidth = GetComponent<Camera>().orthographicSize * ((float)Screen.width / Screen.height);
         x = Mathf.Clamp(x, min.x + cameraHaflWidth, max.x - cameraHaflWidth);
